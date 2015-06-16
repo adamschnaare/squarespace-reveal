@@ -1,0 +1,15 @@
+{
+  "name": "reveal-reader",
+  "version": "0.0.0",
+  "authors": [
+    "adam.schnaare@gmail.com <ba7O&GJzv%EmL&26>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
