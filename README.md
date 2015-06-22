@@ -11,8 +11,8 @@ A RevealJS-based announcements/events reader for SquareSpace feeds
 // Config
 var ssReveal = {
     config: {
-        baseUrl: 'https://themill-church.squarespace.com',
-        feedUrl: 'https://themill-church.squarespace.com/events/?format=json-pretty',
+        baseUrl: 'https://themill.church',
+        feedUrl: 'https://themill.church/events/?format=json-pretty',
         range: 'upcoming', // past,upcoming
         linkText: 'See Details'
     }
