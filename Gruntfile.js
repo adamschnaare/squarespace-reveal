@@ -81,27 +81,23 @@
                         'bower_components/reveal-js/css/reveal.min.css',
                         'bower_components/reveal-js/css/theme/default.css',
                         'bower_components/reveal-js/lib/css/zenburn.css',
-                        '<%= yeoman.dist %>/styles/custom.css'
+                        '<%= yeoman.app %>/styles/custom.css'
                     ],
                     dest: '<%= yeoman.temp %>/built.css'
-                }
-            },
-            uglify: {
+                },
                 scripts: {
-                    files: {
-                        '<%= yeoman.temp %>/built.js': [
-                            '<%= yeoman.dist %>/scripts/print-pdf.js',
-                            'bower_components/jquery/dist/jquery.min.js',
-                            'bower_components/reveal-js/lib/js/head.min.js',
-                            'bower_components/reveal-js/js/reveal.min.js',
-                            '<%= yeoman.dist %>/scripts/custom.js'
-                        ]
-                    }
+                    src: [
+                        '<%= yeoman.app %>/scripts/print-pdf.js',
+                        'bower_components/jquery/dist/jquery.min.js',
+                        'bower_components/reveal-js/js/reveal.min.js',
+                        '<%= yeoman.app %>/scripts/custom.js'
+                    ],
+                    dest: '<%= yeoman.temp %>/built.js'
                 }
             },
             includes: {
                 files: {
-                    src: ['<%= yeoman.app %>/squarespace-reveal.html','<%= yeoman.app %>/index.html'], // Source files
+                    src: ['<%= yeoman.app %>/ssReveal-footer.html','<%= yeoman.app %>/ssReveal-header.html'], // Source files
                     dest: '<%= yeoman.dist %>', // Destination directory
                     flatten: true,
                     cwd: '.'
@@ -113,13 +109,13 @@
         grunt.registerTask('build', [
             'clean:dist',
             'concat:styles',
-            'uglify:scripts',
+            'concat:scripts',
             'includes'
         ]);
         grunt.registerTask('serve', [
             'clean:dist',
             'concat:styles',
-            'uglify:scripts',
+            'concat:scripts',
             'includes',
             'connect:test'
         ]);
