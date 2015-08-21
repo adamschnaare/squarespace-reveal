@@ -29,3 +29,6 @@ var ssReveal = {
 ## Usage
 - Once setup, just navigate to your create page url, and you're good to go!
 - Repeat for each events feed you want to use as an announcements slideshow
+
+## Manual Export
+There is also a manual export file, which when run on a webserver locally will print HTML formatted for an email of the upcoming events.
